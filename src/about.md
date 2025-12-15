@@ -1,13 +1,12 @@
 ---
 title: About
 layout: about.njk
-name: Ashwin Kishin Banwari
+name: Me
 image: '/images/me.jpg'
 ---
 
-I'm a C++ software engineer specializing in systems programming. Currently, I work at Roblox where I work the data model of our custom game engine.
+I'm a C++ software engineer specializing in systems programming. I currently work at Roblox, where I develop the data model for our custom game engine.
 
 ## Background
 
-I graduated with a degree in CS and Math from the University of Washington. My passion for programming started when I was making text adventure RPGs in school, and I've since retained that love for gaming. I'm also a big fan of Linux and love fiddling with my system and the satisfaction of building a system that aligns perfectly with my workflow and preferences.
-
+I graduated with degrees in Computer Science and Mathematics from the University of Washington. My journey into programming began with text adventure RPGs in school, sparking a passion for both code and gaming that continues today. These days, I'm particularly fascinated by parallelism and the challenge of leveraging modern multi-core CPUs effectively. I'm also a Linux enthusiast who loves tinkering with systems and optimizing my development environment.
