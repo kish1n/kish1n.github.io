@@ -1,14 +1,13 @@
 ---
-title: About Aidan Charles Powell
+title: About
 layout: about.njk
-name: Aidan Charles Powell
-image: '/images/me.jpeg'
+name: Ashwin Kishin Banwari
+image: '/images/me.jpg'
 ---
 
-Aidan Charles Powell is a 23-year-old health centre receptionist who enjoys watching television, eating out and social media. He is generous and giving, but can also be very rude and a bit lazy.
+I'm a C++ software engineer specializing in systems programming. Currently, I work at Roblox where I work the data model of our custom game engine.
 
-He is a Jedi who defines himself as straight. He has a degree in medicine. He is a vegetarian. He is obsessed with vintage dresses.
+## Background
 
-He grew up in a middle class neighbourhood. After his mother died when he was young, he was raised by his father
+I graduated with a degree in CS and Math from the University of Washington. My passion for programming started when I was making text adventure RPGs in school, and I've since retained that love for gaming. I'm also a big fan of Linux and love fiddling with my system and the satisfaction of building a system that aligns perfectly with my workflow and preferences.
 
-He is currently married to Maureen Erika Quinn. Maureen is 13 years older than him and works as a sales assistant.
