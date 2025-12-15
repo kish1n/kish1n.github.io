@@ -28,7 +28,7 @@ jobs:
 
       # 4. Build the Eleventy site
       - name: Build site
-        run: npx @11ty/eleventy
+        run: yarn build
 
       # 5. Deploy to GitHub Pages
       - name: Deploy to gh-pages
