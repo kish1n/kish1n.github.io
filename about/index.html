@@ -95,7 +95,15 @@
         
 <div class="about">
   <h1>About Me</h1>
-  <img src="/images/me.jpg" alt="" class="about__image">
+  <img src="/images/me-800.jpg" 
+       srcset="/images/me-800.jpg 400w, 
+               /images/me-800@2x.jpg 800w,
+               /images/me-800@3x.jpg 1200w"
+       sizes="(min-width: 35.9375em) 400px, 100vw"
+       alt="Me" 
+       class="about__image"
+       width="400"
+       height="320">
   <p>I'm a C++ software engineer specializing in systems programming. I currently work at Roblox, where I develop the data model for our custom game engine.</p>
 <h2>Background</h2>
 <p>I graduated with degrees in Computer Science and Mathematics from the University of Washington. I'm particularly fascinated by parallelism and the challenge of leveraging modern multi-core CPUs effectively. I enjoy contributing to the LLVM project and am a Linux enthusiast who loves tinkering with systems.</p>
@@ -147,15 +155,5 @@
     <script src="/assets/main.31d6cfe0d16ae931b73c.js"></script>
     
     
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
-    <script>
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function() {
-          mermaid.initialize({startOnLoad:true});
-        });
-      } else {
-        mermaid.initialize({startOnLoad:true});
-      }
-    </script>
   </body>
 </html>
