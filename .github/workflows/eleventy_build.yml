@@ -12,25 +12,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout the repo
+      # Checkout the repo
       - uses: actions/checkout@v4
 
-      # 2. Setup Node 18
+      # Setup Node 18
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'yarn'
 
-      # 3. Install dependencies using Yarn
+      # Install dependencies using Yarn
       - name: Install dependencies
         run: yarn install
 
-      # 4. Build the Eleventy site
+      # Build the Eleventy site
       - name: Build site
         run: yarn build
 
-      # 5. Deploy to GitHub Pages
+      # Add CNAME file dynamically to build output
+      - run: echo "kish1n.io" > _site/CNAME
+
+      # Deploy to GitHub Pages
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
