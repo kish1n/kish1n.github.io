@@ -2,7 +2,7 @@
 title: About
 layout: about.njk
 name: Me
-image: '/images/me.jpg'
+image: '/images/me-800.jpg'
 ---
 
 I'm a C++ software engineer specializing in systems programming. I currently work at Roblox, where I develop the data model for our custom game engine.

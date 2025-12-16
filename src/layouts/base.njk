@@ -142,7 +142,7 @@
 
     {% bundledjs %}
     
-    {# Add mermaid -- deferred to not block render #}
+    {# Add mermaid -- deferred to not block render
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
     <script>
       if (document.readyState === 'loading') {
@@ -153,5 +153,6 @@
         mermaid.initialize({startOnLoad:true});
       }
     </script>
+    #}
   </body>
 </html>
