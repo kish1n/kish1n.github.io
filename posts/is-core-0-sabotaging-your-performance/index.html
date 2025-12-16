@@ -513,7 +513,7 @@
 </tr>
 </tbody>
 </table>
-<h2>IRQs: The Hidden Performance Tax</h2>
+<h2>IRQs: Source of Tail Latency?</h2>
 <p>IRQs (Interrupt Requests) are treated specially by <code>perf</code>. Despite triggering a context switch to kernel interrupt handlers, saving processor state and suspending user-space execution, they don't increment the context switch counter. This explains why <code>perf</code> reported zero context switches!</p>
 <p>The data reveals the root cause:</p>
 <ul>
