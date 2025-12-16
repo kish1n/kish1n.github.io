@@ -8,8 +8,10 @@
 
     {% bundledcss %}
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet"></noscript>
 
     <title>
       {{  title  | escape }}
@@ -49,11 +51,6 @@
       <meta property="og:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
       <meta name="twitter:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
     {% endif %}
-
-    {# Add mermaid -- start #}
-      <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-      <script>mermaid.initialize({startOnLoad:true});</script>
-    {# Add mermaid -- end #}
   </head>
   <body>
     <div class="layout-wrapper">
@@ -146,5 +143,17 @@
     </footer>
 
     {% bundledjs %}
+    
+    {# Add mermaid -- deferred to not block render #}
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
+    <script>
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+          mermaid.initialize({startOnLoad:true});
+        });
+      } else {
+        mermaid.initialize({startOnLoad:true});
+      }
+    </script>
   </body>
 </html>
