@@ -31,7 +31,7 @@ jobs:
         run: yarn build
 
       # Add CNAME file dynamically to build output
-      - run: echo "kish1n.io" > _site/CNAME
+      - run: echo "kish1n.io" > public/CNAME
 
       # Deploy to GitHub Pages
       - name: Deploy to gh-pages
