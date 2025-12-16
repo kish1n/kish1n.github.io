@@ -1,27 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Ashwin Kishin Banwari</title>
-  <subtitle></subtitle>
-  <link href="https://kish1n.github.io//feed.xml" rel="self"/>
-  <link href="https://kish1n.github.io//"/>
-  
-    <updated>2025-12-16T00:00:00Z</updated>
-  
-  <id>https://kish1n.github.io/</id>
-  <author>
-    <name>Ashwin Kishin Banwari</name>
-    <email>ashwinkbanwari@gmail.com</email>
-  </author>
-  
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href=https://kish1n.github.io/posts/is-core-0-sabotaging-your-performance/>
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Feed">
+
+    <link href="/assets/main.df9f7c4e70c97edb71fe.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+    <title>
+      Is Core 0 Sabotaging Your Performance?
+      
+         | Ashwin Kishin Banwari
+      
+    </title>
+
+    <link rel="icon" type= “image/png” href="/images/favicon.png">
+
+    <meta property="og:title" content="Is Core 0 Sabotaging Your Performance?">
+    <meta property="og:site_name" content="Ashwin Kishin Banwari"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://kish1n.github.io//posts/is-core-0-sabotaging-your-performance/"/>
+    <meta name="twitter:card" content="summary_large_image">
+
     
-    <entry>
-      <title>Is Core 0 Sabotaging Your Performance?</title>
-      <link href="https://kish1n.github.io//posts/is-core-0-sabotaging-your-performance/"/>
-      <updated>2025-12-16T00:00:00Z</updated>
-      <id>https://kish1n.github.io//posts/is-core-0-sabotaging-your-performance/</id>
-      <content type="html">
-        <![CDATA[
-      <p><strong>TL;DR:</strong> Not all CPU cores are equal—even beyond architectural differences like 3D V-Cache. On an AMD Ryzen 9 9950X3D, core 0 shows significantly worse tail latency due to the OS preferentially routing interrupts to it. For latency-sensitive applications, this hidden asymmetry can cause significant performance degradation.</p>
+
+    
+    
+    
+      <meta name="description" content="An investigation into the discrepancy in observed performance between cores on a modern CPU">
+      <meta property="og:description" content="An investigation into the discrepancy in observed performance between cores on a modern CPU">
+      <meta name="description" content="An investigation into the discrepancy in observed performance between cores on a modern CPU"/>
+    
+
+    
+      
+    
+    
+      <meta property="og:image" content="https://kish1n.github.io/images/default-social-image.png"/>
+      <meta name="twitter:image" content="https://kish1n.github.io/images/default-social-image.png"/>
+    
+  </head>
+  <body>
+    <div class="layout-wrapper">
+
+      <header class="header">
+        <div class="header__content">
+          <h1 class="site-title">
+            <a href=/>
+              Ashwin Kishin Banwari
+            </a>
+          </h1>
+
+          
+            <nav class="nav">
+              <ul class="nav__list">
+                
+                  
+                  
+
+                  
+
+                  
+
+                  <li class="nav-item">
+                    <a href="/blog"  >Blog</a>
+                  </li>
+                
+                  
+                  
+
+                  
+
+                  
+
+                  <li class="nav-item">
+                    <a href="/about"  >About</a>
+                  </li>
+                
+              </ul>
+            </nav>
+
+          
+
+        </div>
+      </header>
+
+      <main class="main">
+        
+<article class="post">
+  <header class="post__header">
+    <h1>Is Core 0 Sabotaging Your Performance?</h1>
+    <div class="post__details">
+      <time datetime="2025-12-16">
+        16 Dec 2025
+      </time>
+      <span> | </span>
+      <span>4 min read</span>
+    </div>
+  </header>
+
+  <main class="post__content">
+    <p><strong>TL;DR:</strong> Not all CPU cores are equal—even beyond architectural differences like 3D V-Cache. On an AMD Ryzen 9 9950X3D, core 0 shows significantly worse tail latency due to the OS preferentially routing interrupts to it. For latency-sensitive applications, this hidden asymmetry can cause significant performance degradation.</p>
 <h2>Introduction</h2>
 <p>It is commonly known that CPUs these days often have different types of cores. For example, Intel has &quot;performance&quot; P-cores and &quot;efficiency&quot; E-cores. AMD's high core count CPUs advertised with 3D V-Cache only have some cores with access to the additional L3 cache, with the rest having the standard amount of L3 cache.</p>
 <p>But are there significant differences between cores beyond what is advertised? By complete accident, I found the answer to this is <em>most definitely</em>.</p>
@@ -460,8 +543,78 @@
 <li><a href="https://github.com/kish1n/cpptail">cpptail - Tail Latency Microbenchmarking Tool</a></li>
 </ul>
 
-    ]]>
-      </content>
-    </entry>
-  
-</feed>
+  </main>
+
+  <aside class="post__aside">
+    <div class="post__tags">
+      
+        
+        <a href="/tags/cpu/">#cpu</a>
+      
+        
+        <a href="/tags/code/">#code</a>
+      
+        
+        <a href="/tags/vcache/">#vcache</a>
+      
+        
+        <a href="/tags/amd/">#amd</a>
+      
+        
+        <a href="/tags/intel/">#intel</a>
+      
+    </div>
+
+    <nav class="post__pagination">
+    </nav>
+  </aside>
+
+</article>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__content">
+
+          <ul class="hero__social-links">
+            
+              
+                
+
+                
+                  
+                
+
+                <li>
+                  <a href="https://www.linkedin.com/in/ashwin-banwari/" target="_blank" rel="noopener noreferrer" >LinkedIn</a>
+                </li>
+              
+                
+
+                
+                  
+                
+
+                <li>
+                  <a href="https://github.com/kish1n" target="_blank" rel="noopener noreferrer" >GitHub</a>
+                </li>
+              
+            
+
+            
+
+              
+            
+          </ul>
+
+          
+
+        </div>
+      </div>
+
+    </footer>
+
+    <script src="/assets/main.31d6cfe0d16ae931b73c.js"></script>
+    
+    
+  </body>
+</html>
