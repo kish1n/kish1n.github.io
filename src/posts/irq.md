@@ -83,7 +83,7 @@ I then created a script to divide the cycles reported by `perf` by time to calcu
 | 14   | 5.69       | 34   | | 30   | 5.69       | 37   |
 | 15   | 5.69       | 31   | | 31   | 5.69       | 28   |
 
-## IRQs: The Hidden Performance Tax
+## IRQs: Source of Tail Latency?
 
 IRQs (Interrupt Requests) are treated specially by `perf`. Despite triggering a context switch to kernel interrupt handlers, saving processor state and suspending user-space execution, they don't increment the context switch counter. This explains why `perf` reported zero context switches!
 
