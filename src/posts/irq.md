@@ -27,7 +27,6 @@ To sanity-check my implementation, I made a test script to run a simple mathemat
 - **OS:** Linux (CachyOS 6.18)
 - **Benchmark Tool:** [cpptail](https://github.com/kish1n/cpptail)
 - **Iterations:** 1,000,000 per core
-- **Measurement:** RDTSC-based nanosecond timing
 
 ## The Data
 
