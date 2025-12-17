@@ -89,10 +89,10 @@ IRQs (Interrupt Requests) are treated specially by `perf`. Despite triggering a 
 The data reveals the root cause:
 
 - **Core 0**: 111 IRQs during benchmark execution, 5.33 GHz effective frequency
-- **Other 3D V-Cache cores**: ~30-60 IRQs, 5.53-5.55 GHz effective frequency  
-- **Non-V-Cache cores**: ~25-45 IRQs, 5.68-5.70 GHz effective frequency
+- **Other 3D V-Cache cores**: ~30-60 IRQs, ~5.54 GHz effective frequency  
+- **Non-V-Cache cores**: ~25-45 IRQs, ~5.69 GHz effective frequency
 
-Core 0 receives **2-3× more interrupts** than other cores. These interrupts include:
+Core 0 receives **~3× more interrupts** than other cores. These interrupts can include:
 - Timer ticks
 - NIC (network interface) interrupts
 - Disk I/O completions
@@ -104,11 +104,11 @@ This is validated by examining perf timing breakdown:
 - **User time**: Comparable across all cores (~1M operations worth)
 - **System time**: Orders of magnitude higher on core 0 than other cores
 
-The tail latency spikes (1,000-23,000ns) occur precisely when IRQs fire during benchmark execution.
+The tail latency spikes (1,000-23,000ns) occur precisely when IRQs fire during benchmark execution. On its own, it may not seem a lot, but hundreds to thousands of them occur each second on core 0, with the amount only increasing with added peripherals, audio processing, network traffic, etc.
 
 ## Conclusion
 
-CPU cores that may be commonly assumed to be identical can behave very differently in practice. Operating system decisions—especially how interrupts are distributed—introduce measurable performance gaps between supposedly equal cores. For applications where nanoseconds matter, understanding and controlling CPU affinity and interrupt distribution is not optional. Linux gamers on dual-CCD AMD CPUs already often use `taskset -c 0-7,16-23 %command%` to pin a game to the 3D V-Cache cores. Perhaps it is time to experiment with `taskset -c 1-7,16-23 %command%`?
+CPU cores that may be commonly assumed to be identical can behave very differently in practice. Operating system decisions—especially how IRQs are distributed—introduce measurable performance gaps between supposedly equal cores. For real-time applications, understanding and controlling CPU affinity and interrupt distribution can provide substantial improvement. Linux gamers on dual-CCD AMD CPUs already manually control cores used by games with `taskset -c 0-7,16-23 %command%` to pin a game to the 3D V-Cache cores. The results from this experiment suggest it may be beneficial for them to remove core 0 from the pool!
 
 Further reading:
 - [Linux IRQ Affinity Documentation](https://www.kernel.org/doc/html/latest/core-api/irq/irq-affinity.html)
